@@ -4,7 +4,11 @@ public class DoWhileLoop2 {
     public static String doWhileLoopTwo(){
         String response = "";
 
-
+        int i = 1;
+        do {
+            response += i + " ";
+            i += 2;
+        } while (i < 20);
 
         return response;
     }

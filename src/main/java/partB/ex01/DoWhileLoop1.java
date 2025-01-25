@@ -4,7 +4,13 @@ public class DoWhileLoop1 {
     public static String doWhileLoopOne(){
         String response = "";
 
+        int[] num = {43, 55, 68, 91, 105};
+        int i = 0;
 
+        do {
+            response += num[i] + "\n";
+            i++;
+        } while (i < num.length);
 
         return response;
     }

@@ -14,10 +14,12 @@ public class AlgoChallenge {
     checkPosOrNeg(-1, 1, false) --> true
     checkPosOrNeg(-4, -5, true) --> true
      */
-
     public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
-
-        return null;
+        if (negative) {
+            return a < 0 && b < 0;
+        } else {
+            return (a < 0 && b > 0) || (a > 0 && b < 0);
+        }
     }
 
 
@@ -33,8 +35,25 @@ public class AlgoChallenge {
      */
 
     public static String exchange(String str) {
+        if (str.length() <= 1) {
+            return str;
+        }
+        char first = str.charAt(0);
+        char last = str.charAt(str.length() - 1);
+        return last + str.substring(1, str.length() - 1) + first;
+    }
 
-        return null;
+    public static void main(String[] args) {
+
+        System.out.println(checkPosOrNeg(1, -1, false));
+        System.out.println(checkPosOrNeg(-1, 1, false));
+
+
+
+        System.out.println(exchange("code"));
+        System.out.println(exchange("a"));
+        System.out.println(exchange("ab"));
+        System.out.println(exchange("hello"));
     }
 
 }
